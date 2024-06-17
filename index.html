@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educational-Websites</title>
+    <link
+      rel="shortcut icon"
+      href="images/icons8-asper-school-of-business-48.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/222a859c2d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js -->
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img src="images/pngegg (4).png" alt="logo" class="nav__logo" />
+        <ul class="nav__links">
+          <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Operations</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Testimonials</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="overlay hidden">
+        <ul class="overlay__links">
+          <li class="overlay__item">
+            <a href="#" class="nav__link">Features</a>
+          </li>
+          <li class="overlay__item">
+            <a href="#" class="nav__link">Operations</a>
+          </li>
+          <li class="overlay__item">
+            <a href="#" class="nav__link">Testimonials</a>
+          </li>
+          <li class="overlay__item"><a href="#" class="nav__link">About</a></li>
+        </ul>
+      </div>
+
+      <div class="header__title">
+        <div class="highlight">
+          <h1>Innovate <span class="highlight__em">Kids</span>Institute</h1>
+        </div>
+        <!-- movie player start -->
+        <!-- https://www.bigbuckbunny.org/ -->
+        <!-- images/classroomchildren-raising-.mp4 -->
+        <div class="player">
+          <video
+            src="https://assets.mixkit.co/videos/preview/mixkit-cars-heading-through-heavy-rain-27704-large.mp4"
+            class="video"
+            playsinline
+          ></video>
+          <!-- show controls -->
+          <div class="show-controls">
+            <!-- ALL CONTROLS HERE -->
+            <div class="controls-container">
+              <!-- progress bar -->
+              <div class="progress-range" title="seek">
+                <div class="progress-bar"></div>
+              </div>
+                <!-- controls group -->
+                <div class="control-group">
+                  <!-- LEFT -->
+                  <div class="controls-left">
+                    <div class="play-controls">
+                      <svg class="icon icon-play2" tiltle="play" id="btn--play">
+                        <use
+                          xlink:href="images/symbol-defs.svg#icon-play2"
+                        ></use>
+                      </svg>
+                      <svg
+                        class="icon icon-pause hide"
+                        tiltle="pause"
+                        id="btn--puse"
+                      >
+                        <use
+                          xlink:href="images/symbol-defs.svg#icon-pause"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="volume">
+                      <div class="volume-icon">
+                        <i
+                          class="fas fa-volume-up"
+                          title="Mute"
+                          id="volume-icon"
+                        ></i>
+                      </div>
+                      <div class="volume-range" title="change-volume">
+                        <div class="volume-bar"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- RIGHT -->
+                  <div class="controls-right">
+                    <div class="speed" title="Playback Rate">
+                      <select name="PlaybackRate" class="player-speed">
+                        <option value="0.5">0.5 x</option>
+                        <option value="0.75">0.75 x</option>
+                        <option value="1" selected>1 x</option>
+                        <option value="1.5">1.5 x</option>
+                        <option value="2">2 x</option>
+                      </select>
+                    </div>
+                    <!-- time -->
+                    <div class="time">
+                      <span class="time-elapsed">00:00 /</span>
+                      <span class="time-duration">02:38</span>
+                    </div>
+                    <div class="fullscreen">
+                      <i class="fas fa-expand"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ALL CONTROLS FINISHED -->
+          </div>
+        </div>
+        <!--  movie player ENDS -->
+        <div class="text">
+          <h4>children rasing🧒🏼</h4>
+          <a href="#" class="header-btn">join us</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section" id="section--1">
+        <div class="star-rating">
+          <button class="star">&#9734;</button>
+          <button class="star">&#9734;</button>
+          <button class="star">&#9734;</button>
+          <button class="star">&#9734;</button>
+          <button class="star">&#9734;</button>
+         
+        </div>
+      </section>
+    </main>
+    
+  </body>
+</html>
