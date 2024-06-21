@@ -9,6 +9,16 @@
       href="images/icons8-asper-school-of-business-48.png"
       type="image/x-icon"
     />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <!-- style.css -->
     <link rel="stylesheet" href="style.css" />
     <!-- font awesome -->
     <script
@@ -19,21 +29,23 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header border-b-2 border-zinc-300">
       <nav class="nav">
         <img src="images/pngegg (4).png" alt="logo" class="nav__logo" />
-        <ul class="nav__links">
-          <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+        <ul class="nav__links hidden md:flex">
           <li class="nav__item">
-            <a href="#" class="nav__link">Operations</a>
+            <a href="#section--1" class="nav__link">Features</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Testimonials</a>
+            <a href="#section--2" class="nav__link">Operations</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section--3" class="nav__link">Testimonials</a>
           </li>
           <li class="nav__item"><a href="#" class="nav__link">About</a></li>
         </ul>
       </nav>
-      <div class="hamburger-menu">
+      <div class="hamburger-menu inline-block md:hidden">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -41,10 +53,10 @@
       <div class="overlay hidden">
         <ul class="overlay__links">
           <li class="overlay__item">
-            <a href="#" class="nav__link">Features</a>
+            <a href="#section--1" class="nav__link">Features</a>
           </li>
           <li class="overlay__item">
-            <a href="#" class="nav__link">Operations</a>
+            <a href="#section--2" class="nav__link">Operations</a>
           </li>
           <li class="overlay__item">
             <a href="#" class="nav__link">Testimonials</a>
@@ -53,27 +65,41 @@
         </ul>
       </div>
 
-      <div class="header__title">
-        <div class="highlight">
-          <h1>Innovate <span class="highlight__em">Kids</span>Institute</h1>
+      <div
+        class="header__title grid grid-rows-[1fr-15rem] min-h-screen grid-cols-12 gap-3 p-2"
+      >
+        <div
+          class="highlight row-auto col-span-5 flex items-center space-x-1 pl-8"
+        >
+          <h1
+            class="text-xxl text-yellow-900 md:text-5xl lg:text-7xl xl:text-8xl font-normal tracking-widest"
+          >
+            Innovate
+            <span
+              class="highlight__em my-32 text-5xl md:text-7xl lg:text-9xl xl:text-10xl text-center bg-Emerald-500"
+              >Kids</span
+            >Institute
+          </h1>
         </div>
         <!-- movie player start -->
-        <!-- https://www.bigbuckbunny.org/ -->
-        <!-- images/classroomchildren-raising-.mp4 -->
-        <div class="player">
-          <video
-            src="https://assets.mixkit.co/videos/preview/mixkit-cars-heading-through-heavy-rain-27704-large.mp4"
-            class="video"
-            playsinline
-          ></video>
-          <!-- show controls -->
-          <div class="show-controls">
-            <!-- ALL CONTROLS HERE -->
-            <div class="controls-container">
-              <!-- progress bar -->
-              <div class="progress-range" title="seek">
-                <div class="progress-bar"></div>
-              </div>
+
+        <div
+          class="col-[7_/_span_12] flex items-center justify-center border border-gray-300 px-2"
+        >
+          <div class="player">
+            <video
+              src="images/5198159-uhd_3840_2160_25fps.mp4"
+              class="video"
+              playsinline
+            ></video>
+            <!-- show controls -->
+            <div class="show-controls">
+              <!-- ALL CONTROLS HERE -->
+              <div class="controls-container">
+                <!-- progress bar -->
+                <div class="progress-range" title="seek">
+                  <div class="progress-bar"></div>
+                </div>
                 <!-- controls group -->
                 <div class="control-group">
                   <!-- LEFT -->
@@ -132,26 +158,175 @@
             </div>
             <!-- ALL CONTROLS FINISHED -->
           </div>
+
+          <!--  movie player ENDS -->
         </div>
-        <!--  movie player ENDS -->
-        <div class="text">
-          <h4>children rasing🧒🏼</h4>
-          <a href="#" class="header-btn">join us</a>
+        <div
+          class="text col-start-1 col-end-12 flex items-center justify-evenly"
+        >
+          <h4 class="font-semibold md:text-5xl">Children are rasing🧒🏼</h4>
+          <button class="header-btn text-sm md:text-lg">Learn more</button>
         </div>
       </div>
     </header>
     <main>
       <section class="section" id="section--1">
+        <div class="section__title">
+          <h2 class="section__description">Features</h2>
+          <h3 class="section__header">
+            Everything you need at innovate school
+          </h3>
+        </div>
+
+        <div class="features">
+          <img
+            src="images/undraw_Bookshelves_re_lxoy-lazy.png"
+            data-src="images/undraw_Bookshelves_re_lxoy.png"
+            alt="Computer"
+            class="features__img lazy-img"
+          />
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg class="icon icon-strategy">
+                <use xlink:href="images/symbol2-defs.svg#icon-strategy"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">40% discount</h5>
+            <p>
+              Strong routines make strong students. Why are routines so
+              beneficial to high school students? For starters, school itself is
+              based on routines. School is essentially a series of similar tasks
+              that repeat on a daily, weekly, monthly, semester-long, and yearly
+              basis.
+            </p>
+          </div>
+
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg class="icon icon-picture">
+                <use xlink:href="images/symbol2-defs.svg#icon-picture"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">Consistent and Purposeful Feedback</h5>
+            <p>
+              Implementing a study timeline prevents last-minute cramming and
+              allows students to work in low-pressure circumstances.
+            </p>
+          </div>
+          <img
+            src="images/undraw_Studying_re_deca -lazy.png"
+            data-src="images/undraw_Studying_re_deca.png"
+            alt="Plant"
+            class="features__img lazy-img"
+          />
+
+          <img
+            src="images/undraw_Teaching_re_g7e3-lazy.png"
+            data-src="images/undraw_Teaching_re_g7e3.png"
+            alt="Credit card"
+            class="features__img lazy-img"
+          />
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg class="icon icon-desktop">
+                <use xlink:href="images/symbol2-defs.svg#icon-desktop"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">Excellent Equipment and Facilities</h5>
+            <p>
+              Take plenty of opportunities to acknowledge your student’s
+              accomplishments—no matter how big or small—and give them positive
+              reinforcement for doing their best.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPERATION -->
+      <section class="section" id="section--2 ">
+        <div class="section__title">
+          <h2 class="section__description">Operations</h2>
+          <h3 class="section__header">Signet Drives Academic Success</h3>
+        </div>
+
+        <div class="operations">
+          <div class="operations__tab-container">
+            <button
+              class="btn operations__tab operations__tab--1 operations__tab--active"
+              data-tab="1"
+            >
+              <span>01</span>Instant Transfers
+            </button>
+            <button class="btn operations__tab operations__tab--2" data-tab="2">
+              <span>02</span>Instant Loans
+            </button>
+            <button class="btn operations__tab operations__tab--3" data-tab="3">
+              <span>03</span>Instant Closing
+            </button>
+          </div>
+          <div
+            class="operations__content operations__content--1 operations__content--active"
+          >
+            <div class="operations__icon operations__icon--1">
+              <svg class="icon icon-briefcase">
+                <use xlink:href="images/symbol3-defs.svg#icon-briefcase"></use>
+              </svg>
+            </div>
+            <h5 class="operations__header">
+              A goal without a plan is just a wish.
+            </h5>
+            <p>
+              At Signet, we use the “plan your work, work your plan”
+              methodology, which can be applied to everything from managing
+              homework deadlines to preparing for college admissions.
+            </p>
+          </div>
+
+          <div class="operations__content operations__content--2">
+            <div class="operations__icon operations__icon--2">
+              <svg class="icon icon-target">
+                <use xlink:href="images/symbol3-defs.svg#icon-target"></use>
+              </svg>
+            </div>
+            <h5 class="operations__header">
+              Good teaching is more a giving of right questions than a giving of
+              right answers.
+            </h5>
+            <p>
+              High school students must be encouraged to solve problems and make
+              big decisions independently so that they build confidence to
+              address significant matters with confidence and purpose.
+            </p>
+          </div>
+          <div class="operations__content operations__content--3">
+            <div class="operations__icon operations__icon--3">
+              <svg class="icon icon-edit">
+                <use xlink:href="images/symbol3-defs.svg#icon-edit"></use>
+              </svg>
+            </div>
+            <h5 class="operations__header">
+              What we learn with pleasure, we never forget.
+            </h5>
+            <p>
+              with the right approach, students can come to enjoy even the most
+              difficult subjects. Signet’s subject tutors are dedicated to
+              imparting not only their knowledge but also their passion to each
+              student. You might be surprised to see how much your teenager ends
+              up loving math or poetry or whatever other subject they once
+              disliked.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section--3">
         <div class="star-rating">
           <button class="star">&#9734;</button>
           <button class="star">&#9734;</button>
           <button class="star">&#9734;</button>
           <button class="star">&#9734;</button>
           <button class="star">&#9734;</button>
-         
         </div>
       </section>
     </main>
-    
   </body>
 </html>
